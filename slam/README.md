@@ -19,9 +19,11 @@ Classes
 Libraries Used
 -----
 
-* SDL2 for 2-D display   : pip install PySDL2
+* SDL2 for 2-D display       : pip install PySDL2
 * cv2 for feature extraction : pip install opencv-python
-* pangolin for 3-D display : https://github.com/uoip/pangolin/tree/master
+* pangolin for 3-D display   : [link](https://github.com/uoip/pangolin/tree/master)
+* scipy                      : python3 -m pip install scipy
+* skimage                    : pip install scikit-image
 * g2opy for optimization (soon!)
 
 LICENSE
