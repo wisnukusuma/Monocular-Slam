@@ -165,8 +165,8 @@ if __name__ == "__main__":
 
   disp2d, disp3d = None, None
     
-#  if os.getenv("HEADLESS") is None:
-#   disp3d = Display3D()
+  if os.getenv("HEADLESS") is None:
+    disp3d = Display3D()
 
   # print(disp3d)
   # cap = cv2.VideoCapture(sys.argv[1])
@@ -197,7 +197,7 @@ if __name__ == "__main__":
  #  disp2d = Display2D(W, H)
 
   #Create Pose 2D Map
-  poseMap = DisplayPose2D()
+  # poseMap = DisplayPose2D()
 
   slam = SLAM(W, H, K)
 
@@ -231,14 +231,13 @@ if __name__ == "__main__":
     #   poses.append([np.linalg.inv(f.pose)[0][3],np.linalg.inv(f.pose)[1][3]])
     # print(poses)
     # print("num of pose: "+str(np.array(poses).ndim)+" pose:"+str(np.array(poses)))
-    if poseMap is not None:
-      poseMap.paint(slam.mapp)
+    # if poseMap is not None:
+    #   poseMap.paint(slam.mapp)
     
     # 3-D display
-    """
     if disp3d is not None:
       disp3d.paint(slam.mapp)
-
+    """
     if disp2d is not None:
       img = slam.mapp.frames[-1].annotate(frame)
       disp2d.paint(img)
